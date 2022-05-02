@@ -3,8 +3,8 @@ Carrera de Especialización en Sistemas Embebidos.
 Universidad de Buenos Aires. 
 Amilcar Alejandro Rincon Charris
 
-#Preguntas orientadoras
-1. Describa brevemente los diferentes perfiles de familias de microprocesadores/microcontroladores de ARM. Explique alguna de sus diferencias características.
+# Preguntas orientadoras
+> Describa brevemente los diferentes perfiles de familias de microprocesadores/microcontroladores de ARM. Explique alguna de sus diferencias características.
 
 
 **Cortex M**
