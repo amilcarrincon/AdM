@@ -1,5 +1,5 @@
 # AdM
-## Repositorio para la calse de Arquitectura de Microprocesadores.
+## Repositorio para la clase de Arquitectura de Microprocesadores. Amilcar Alejandro Rincón Charris
 
 Introducción a las arquitecturas Cortex v7 (A-R-M).
 
