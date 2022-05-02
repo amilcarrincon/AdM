@@ -1,9 +1,9 @@
-**Arquitectura de Microprocesadores.
+Arquitectura de Microprocesadores.
 Carrera de Especialización en Sistemas Embebidos.
 Universidad de Buenos Aires. 
-Amilcar Alejandro Rincon Charris**
+Amilcar Alejandro Rincon Charris
 
-#**Preguntas orientadoras**
+#Preguntas orientadoras
 1. Describa brevemente los diferentes perfiles de familias de microprocesadores/microcontroladores de ARM. Explique alguna de sus diferencias características.
 
 
