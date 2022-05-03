@@ -5,10 +5,15 @@
 
 # Preguntas orientadoras
 > 1. Describa brevemente los diferentes perfiles de familias de microprocesadores/microcontroladores de ARM. Explique alguna de sus diferencias características.
-
-
+ARM significa Maquina Avanzada de Conjunto de Instrucciones Reducido (Advanced RISC Machine).
+**Cortex A (Application)**
+Procesadores de alto rendimiento orientados a la implementación de sistemas operativos en sistemas embebidos de alta performance. 
+**Cortex R (Realtime)**
+Procesadores orientados sistemas de tiempo real donde prima la necesidad de implementar soluciones de baja latencia y alta capacidad de procesamiento. 
+**La familia Cortex-M** es una serie de microprocesadores diseñados para bajo consumo de energía. Procesadores orientados a dispositivos de consumo masivo y sistemas embebidos compactos(diseñados para alta densidad de código y programación en C).
 ## Cortex M
 > 2. Describa brevemente las diferencias entre las familias de procesadores Cortex M0, M3 y M4.
+
  
 > 3. ¿Por qué se dice que el set de instrucciones Thumb permite mayor densidad de código? Explique
 
