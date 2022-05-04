@@ -15,12 +15,18 @@ Procesadores orientados sistemas de tiempo real donde prima la necesidad de impl
 ## Cortex M
 > 2. Describa brevemente las diferencias entre las familias de procesadores Cortex M0, M3 y M4.
 
+M0, M0 +: son las versiones más basicas de los cortex, por lo que no se pueden producir microcontroladores STM32 de alto rendimiento;
+M3: Actualmente, la selección de núcleo de diseño más convencional, con una amplia gama de aplicaciones;
+M4: Al comparar el núcleo M3, el procesador M4 agrega instrucciones para procesar datos DSP por lo que se pueden considerar como números de punto flotant.
+
  
 > 3. ¿Por qué se dice que el set de instrucciones Thumb permite mayor densidad de código? Explique
 
 En el estado ARM, el procesador ejecuta instrucciones ARM alineadas con palabras de 32 bits, y en el estado Thumb, el procesador ejecuta instrucciones THUMB alineadas con media palabra de 16 bits.
 
 > 4. ¿Qué entiende por arquitectura load-store? ¿Qué tipo de instrucciones no posee este tipo de arquitectura?
+
+Las unidades Load/Store son las encargadas de ejecutar las instrucciones relativas al acceso a la memoria RAM del sistema, ya sean de lectura como de escritura. No existe una unidad L/S, sino que son dos tipos de unidades que funcionan en paralelo y que gestionan el acceso a los datos.
 
 > 5. ¿Cómo es el mapa de memoria de la familia?
 
