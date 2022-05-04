@@ -5,10 +5,11 @@
 
 # Preguntas orientadoras
 > 1. Describa brevemente los diferentes perfiles de familias de microprocesadores/microcontroladores de ARM. Explique alguna de sus diferencias características.
+
 ARM significa Maquina Avanzada de Conjunto de Instrucciones Reducido (Advanced RISC Machine).
 **Cortex A (Application)**
 Procesadores de alto rendimiento orientados a la implementación de sistemas operativos en sistemas embebidos de alta performance. 
-**Cortex R (Realtime)**
+**Cortex R (Real time)**
 Procesadores orientados sistemas de tiempo real donde prima la necesidad de implementar soluciones de baja latencia y alta capacidad de procesamiento. 
 **La familia Cortex-M** es una serie de microprocesadores diseñados para bajo consumo de energía. Procesadores orientados a dispositivos de consumo masivo y sistemas embebidos compactos(diseñados para alta densidad de código y programación en C).
 ## Cortex M
@@ -16,6 +17,8 @@ Procesadores orientados sistemas de tiempo real donde prima la necesidad de impl
 
  
 > 3. ¿Por qué se dice que el set de instrucciones Thumb permite mayor densidad de código? Explique
+
+En el estado ARM, el procesador ejecuta instrucciones ARM alineadas con palabras de 32 bits, y en el estado Thumb, el procesador ejecuta instrucciones THUMB alineadas con media palabra de 16 bits.
 
 > 4. ¿Qué entiende por arquitectura load-store? ¿Qué tipo de instrucciones no posee este tipo de arquitectura?
 
