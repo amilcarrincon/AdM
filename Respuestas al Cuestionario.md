@@ -34,7 +34,13 @@ El mapa de memoria de la familia es de 4GB y tiene 32 bits de direccionamiento. 
 
 > 6. ¿Qué ventajas presenta el uso de los “shadowed pointers” del PSP y el MSP?
 
+La principal diferencia entre el (PSP) puntero de pila y el (MSP) contador de programa es que el puntero de pila es un registro que almacena la dirección de la última solicitud de programa en una pila, mientras que el contador de programa es un registro que almacena la dirección de la siguiente instrucción que se ejecutará desde la memoria. El hecho de que el sistema operativo y los controladores de excepciones utilicen una pila diferente a la de la aplicación significa que el sistema operativo puede proteger su pila y evitar que las aplicaciones accedan a ella o la corrompan.
+
 > 7. Describa los diferentes modos de privilegio y operación del Cortex M, sus relaciones y como se conmuta de uno al otro. Describa un ejemplo en el que se pasa del modo privilegiado a no priviligiado y nuevamente a privilegiado.
+
+En el modo privilegiado, los usuarios pueden acceder y configurar los registros de control del sistema, como los controladores de interrupción NVIC.
+En el modo no privilegiado, el registro de control del sistema no está permitido acceder, una vez que el acceso resultará en anomalías de hardware. 
+Todos los registros periféricos cuyo SPI, USART, USB, incluidos los registros de SPI, USART, USB y otros registros periféricos se pueden acceder bajo niveles no privilegiados. 
 
 > 8. ¿Qué se entiende por modelo de registros ortogonal? Dé un ejemplo
  
