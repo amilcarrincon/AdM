@@ -30,6 +30,8 @@ Las unidades Load/Store son las encargadas de ejecutar las instrucciones relativ
 
 > 5. ¿Cómo es el mapa de memoria de la familia?
 
+El mapa de memoria de la familia es de 4GB y tiene 32 bits de direccionamiento. Basicamente esta dividido en stack, periféricos, sram, y flash. Además, permite el uso de bit-banding, que son regiones de memoria de 8bits mapeadas a un bit de la memoria. 
+
 > 6. ¿Qué ventajas presenta el uso de los “shadowed pointers” del PSP y el MSP?
 
 > 7. Describa los diferentes modos de privilegio y operación del Cortex M, sus relaciones y como se conmuta de uno al otro. Describa un ejemplo en el que se pasa del modo privilegiado a no priviligiado y nuevamente a privilegiado.
