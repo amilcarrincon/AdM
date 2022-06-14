@@ -106,20 +106,19 @@ SVC es un mecanismo de excepción proporcionado por el núcleo del procesador AR
 **ISA**
 > 1.  ¿Qué son los sufijos y para qué se los utiliza? Dé un ejemplo
 
-Son extensiones condicionales en los nemonicos.
+Son extensiones condicionales en los nemonicos y consecuentemente generan una variante de dicha instrucción . Por ejemplo en la instrucción ldr, ldrh, ldrb. 
 > 2.  ¿Para qué se utiliza el sufijo ‘s’? Dé un ejemplo
 
-Se utiliza para actualizar el registro APSR. Por ejemplo.
+Se utiliza para actualizar el registro APSR.  
 
 > 3.  ¿Qué utilidad tiene la implementación de instrucciones de aritmética saturada? Dé un ejemplo con operaciones con datos de 8 bits.
 
-Se utiliza para generar una saturación por valores negativos o positivos ante el incremento de una variable que produzca 
-overflow o bit de carry.
+Se utiliza para generar una saturación por valores negativos o positivos ante el incremento de una variable que produzca overflow o bit de carry.
 > 4.  Describa brevemente la interfaz entre assembler y C ¿Cómo se reciben los argumentos 	de las funciones? ¿Cómo se devuelve el resultado? ¿Qué registros deben guardarse en la 	pila antes de ser modificados?
 
-Los argumentos están definidos por una convención de llamadas, denominado "calling convections", y define los registros del R0 al R4 como los registros en donde se encuentrán los argumentos. Si posee más de cuatro argumentos, entonces se deja en la memoria.
+Los argumentos están definidos por una convención de llamadas, denominado "calling convections", y define los registros del R0 al R4 como los registros en donde se encuentrán los argumentos. Si posee más de cuatro argumentos, entonces se deja en la memoria. Cuando se llama a una función el procesador guarda en el stack primero todos los registros que se encontraba utilizando y luego los parámetros que la función recibe por argumento. Cuando se comienza a ejecutar la función, esta primero recupera del stack los valores de los argumentos y antes de retornar pone en el stack los valores de retorno de la función. Cuando el programa vuelve de la función saca del stack los valores retornados y luego los valores de los registros, de forma que estos se encuentren en el mismo estado que antes del llamado a la función.
 
 > 5. ¿Qué es una instrucción SIMD? ¿En qué se aplican y que ventajas reporta su uso? Dé un ejemplo.
 
 Es una instruccion que permite realizar multiples operaciones por ciclos de clock. Se aplican en situaciones donde sea
-importante la velocidad de procesamiento. Ej: uhadd16 r1, r1, r0
+importante la velocidad de procesamiento. Ejemplo: uhadd16 r1, r1, r0
