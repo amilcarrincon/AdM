@@ -1,0 +1,7 @@
+22:58:25 **** Build of configuration Debug for project adm_c16 ****
+make -j8 all 
+arm-none-eabi-size   adm_c16.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12624	     20	   3492	  16136	   3f08	adm_c16.elf
+Finished building: default.size.stdout
+ 
