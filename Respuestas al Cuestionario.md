@@ -48,6 +48,7 @@ En general, una instrucción codifica una operación básica que el computador r
 valores de los tres factores anteriores sin ninguna restricción. Ejemplo: ISA Instruction Set Architecture.
 
 > 9. ¿Qué ventajas presenta el uso de intrucciones de ejecución condicional (IT)? Dé un ejemplo
+
 Una de las ventajas del uso de instrucciones de ejecución condicional es que se evita la ejecución de una instrucción al darse una determinada condición. Las instrucciones de salto condicional comprueban ciertos indicadores del registro CCR para decidir si se debe saltar o no. 
 
 > 10. Describa brevemente las excepciones más prioritarias (reset, NMI, Hardfault).
@@ -76,6 +77,7 @@ Las interrupciones son generadas por los dispositivos periféricos habilitando u
 (CMSIS) es una capa de abstracción de hardware independiente del proveedor de la serie de procesadores Cortex-M. El propósito de CMSIS es permitir que las MCU Cortex M de diferentes fabricantes logren un cierto grado de consistencia al menos en el nivel central, y mejorar la eficiencia de la migración de software.
 
 > 16. Cuando ocurre una interrupción, asumiendo que está habilitada ¿Cómo opera el microprocesador para atender a la subrutina correspondiente? Explique con un ejemplo
+
 Una petición de interrupción o más conocida como IRQ, siglas que significan Interrupt ReQuest, es un mecanismo indispensable en toda CPU para poder interactuar con ella a todos los niveles, tanto por parte de los usuarios como el resto del hardware.Para gestionar una petición de interrupción la CPU ha de parar en seco el ciclo de instrucción, cada vez que una instrucción es completada la propia CPU va a comprobar si existe una petición de interrupción. En el caso de que no exista ejecutará la siguiente línea de código del programa. Si existe lo que hará será almacenar el estado del programa en un registro especial. Siendo el estado el valor de la siguiente instrucción en el contador de programa. Dependiendo del cual sea el tipo de instrucción, la CPU cargará en el contador de programa una dirección de memoria especial que apunta a la ROM de instrucciones, un programa en una memoria aparte del procesador que tiene codificado como la CPU tiene que gestionar dicha instrucción.
 
 > 17. ¿Cómo cambia la operación de stacking al utilizar la unidad de punto flotante?
