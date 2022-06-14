@@ -1,0 +1,37 @@
+16:04:15 **** Incremental Build of configuration Debug for project AdM_c17_Amilcar_Rincon ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Src/asm_func.d" -MT"Core/Src/asm_func.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/asm_func.o" "../Core/Src/asm_func.S"
+arm-none-eabi-gcc "../Core/Src/ejercicios.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/ejercicios.d" -MT"Core/Src/ejercicios.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ejercicios.o"
+../Core/Src/asm_func.S: Assembler messages:
+../Core/Src/asm_func.S:78: Error: symbol `Lazo' is already defined
+../Core/Src/asm_func.S:98: Error: symbol `Lazo' is already defined
+../Core/Src/asm_func.S:118: Error: symbol `Lazo' is already defined
+../Core/Src/asm_func.S:182: Error: symbol `Lazo' is already defined
+../Core/Src/asm_func.S:197: Error: symbol `Lazo' is already defined
+../Core/Src/asm_func.S:225: Error: symbol `Lazo' is already defined
+../Core/Src/asm_func.S:229: Error: symbol `Resta' is already defined
+../Core/Src/asm_func.S:235: Error: symbol `Maximo' is already defined
+../Core/Src/asm_func.S:287: Error: symbol `Lazo' is already defined
+make: *** [Core/Src/subdir.mk:44: Core/Src/asm_func.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/ejercicios.c: In function 'pack32to16':
+../Core/Src/ejercicios.c:91:11: warning: unused variable 'i' [-Wunused-variable]
+   91 |  uint32_t i = 0;
+      |           ^
+../Core/Src/ejercicios.c: At top level:
+../Core/Src/ejercicios.c:102:9: error: conflicting types for 'max_c'
+  102 | int32_t max_c(int32_t * vectorIn, uint32_t longitud)
+      |         ^~~~~
+In file included from ../Core/Src/ejercicios.c:8:
+../Core/Inc/ejercicios.h:18:10: note: previous declaration of 'max_c' was here
+   18 | uint32_t max_c (int32_t * vectorIn, uint32_t longitud);
+      |          ^~~~~
+../Core/Src/ejercicios.c: In function 'max_c':
+../Core/Src/ejercicios.c:104:11: warning: unused variable 'i' [-Wunused-variable]
+  104 |  uint32_t i = 0;
+      |           ^
+make: *** [Core/Src/subdir.mk:46: Core/Src/ejercicios.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+16:04:16 Build Failed. 13 errors, 2 warnings. (took 565ms)
+

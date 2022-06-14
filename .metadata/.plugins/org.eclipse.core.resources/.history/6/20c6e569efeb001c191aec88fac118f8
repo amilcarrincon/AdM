@@ -1,0 +1,17 @@
+/*
+ * ejercicios.c
+ *
+ *  Created on: Mayo 31, 2022
+ *      Author: Amilcar Rincon Charris
+ */
+
+#include "ejercicios.h"
+
+/* Ejercicio 1 - Realizar una función que inicialice un vector con ceros.
+La función debe tener el siguiente prototipo: void zeros (uint32_t * vector, uint32_t longitud);
+*/
+
+
+
+
+

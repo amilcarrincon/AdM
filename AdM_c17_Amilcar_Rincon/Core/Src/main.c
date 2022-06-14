@@ -159,46 +159,6 @@ int main(void)
 
   //const uint32_t Resultado = asm_sum (5, 3);
 
-  //Ejercicios en C
-  //Ejercicio 1
-  //Realizar una función que inicialice un vector de ceros.
-  void zeros(uint32_t * vector,uint32_t longitud){
-	  for (uint32_t i=0; i<longitud; i++){
-		  vector[i];
-	  }
-  }
-
-  //Ejercicio 2
-  //Realizar una función que realice el producto de un vector y un escalar
-  void productoEscalar32 (uint32_t* vectorIn, uint32_t* vectorOut, uint32_t longitud, uint32_t escalar){
-	  for(uint32_t i=0; i<longitud; i++){
-		  vectorOut[i]=(uint32)(vectorIn[i]*escalar);
-	  }
-  }
-
-
-  //Ejercicio 3
-  //Adapte la función del ejercicio 2 para realizar operaciones sobre vectores de 16 bits:
-  void productoEscalar16 (uint16_t* vectorIn, uint16_t* vectorOut, uint32_t longitud, uint16_t escalar){
-  	  for(uint16_t i=0; i<longitud; i++){
-  		  vectorOut[i]=(uint16_t)(vectorIn[i]*escalar);
-  	  }
-    }
-
-  //Ejercicio 4
-  //Adapte la función del ejercicio 3 para saturar el resultado del producto a 12 bits:
-  void productoEscalar12 (uint16_t * vectorIn, uint16_t * vectorOut, uint32_t longitud, uint16_t escalar){
-	for (uint_32_t i=0; i<longitud; i++){
-		vectorOut[i]=((vectorIn[i]*escalar)>0x0FFF)?0x0FFF:(vectorIn[i]*escalar);
-	}
-  }
-
-
-
-
-
-
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

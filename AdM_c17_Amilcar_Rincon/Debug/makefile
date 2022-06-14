@@ -34,37 +34,37 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := adm_c16
+BUILD_ARTIFACT_NAME := AdM_c17_Amilcar_Rincon
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-adm_c16.elf \
+AdM_c17_Amilcar_Rincon.elf \
 
 MAP_FILES += \
-adm_c16.map \
+AdM_c17_Amilcar_Rincon.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-adm_c16.list \
+AdM_c17_Amilcar_Rincon.list \
 
 OBJCOPY_BIN += \
-adm_c16.bin \
+AdM_c17_Amilcar_Rincon.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: adm_c16.elf secondary-outputs
+main-build: AdM_c17_Amilcar_Rincon.elf secondary-outputs
 
 # Tool invocations
-adm_c16.elf adm_c16.map: $(OBJS) $(USER_OBJS) E:\ESPECIALIZACION\ SYS\ EMB\ARQUITECTURA\ DE\ MICROPROCESADORES\CLASE\ 4\adm_c16\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "adm_c16.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\ESPECIALIZACION SYS EMB\ARQUITECTURA DE MICROPROCESADORES\CLASE 4\adm_c16\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="adm_c16.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+AdM_c17_Amilcar_Rincon.elf AdM_c17_Amilcar_Rincon.map: $(OBJS) $(USER_OBJS) /home/amilcar/Desktop/AdM/AdM/AdM_c17_Amilcar_Rincon/STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "AdM_c17_Amilcar_Rincon.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/amilcar/Desktop/AdM/AdM/AdM_c17_Amilcar_Rincon/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AdM_c17_Amilcar_Rincon.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -73,19 +73,19 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-adm_c16.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "adm_c16.list"
+AdM_c17_Amilcar_Rincon.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "AdM_c17_Amilcar_Rincon.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-adm_c16.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "adm_c16.bin"
+AdM_c17_Amilcar_Rincon.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "AdM_c17_Amilcar_Rincon.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) adm_c16.bin adm_c16.elf adm_c16.list adm_c16.map default.size.stdout
+	-$(RM) AdM_c17_Amilcar_Rincon.bin AdM_c17_Amilcar_Rincon.elf AdM_c17_Amilcar_Rincon.list AdM_c17_Amilcar_Rincon.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)

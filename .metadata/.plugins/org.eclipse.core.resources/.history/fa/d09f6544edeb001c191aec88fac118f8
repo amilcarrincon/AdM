@@ -1,0 +1,15 @@
+/*
+ * ejercicios.c
+ *
+ *  Created on: Mayo 31, 2022
+ *      Author: Amilcar Rincon Charris
+ */
+
+#ifndef INC_EJERCICIOS_C_
+#define INC_EJERCICIOS_C_
+#include <stdint.h>
+
+
+
+
+#endif /* INC_EJERCICIOS_C_ */

@@ -1,0 +1,8 @@
+2022-06-14 10:13:10,110 [INFO] Activator:177 - 
+
+
+2022-06-14 10:13:10,112 [INFO] Activator:178 - !SESSION log4j initialized
+2022-06-14 10:13:12,144 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2022-06-14 10:14:03,077 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2022-06-14 10:14:03,081 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2022-06-14 16:03:39,558 [ERROR] AdobePublisher:183 - Exception while getting the server answer: java.net.SocketTimeoutException: Read timed out

@@ -5,10 +5,15 @@
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/amilcar/Desktop/AdM/AdM/AdM_c17_Amilcar_Rincon"/>
+			<item value="/home/amilcar/Desktop/AdM/AdM"/>
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/media/amilcar/AMILCAR2022/ESPECIALIZACION SYS EMB/ARQUITECTURA DE MICROPROCESADORES/CLASE 4/adm_c17_AmilcarRincon.zip"/>
+			<item value=""/>
 			<item value="E:\ESPECIALIZACION SYS EMB\ARQUITECTURA DE MICROPROCESADORES\CLASE 4\adm_c16.zip"/>
 		</list>
 	</section>
@@ -18,6 +23,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/amilcar/Desktop/AdM/AdM"/>
 			<item value="E:\ESPECIALIZACION SYS EMB\SISTEMAS OPERATIVOS EN TIEMPO REAL 1\EJEMPLOS UDEMY\001CreacionEliminacionTareasMetodoDinamico"/>
 		</list>
 	</section>
