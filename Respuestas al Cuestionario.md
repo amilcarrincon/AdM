@@ -43,12 +43,18 @@ En el modo no privilegiado, el registro de control del sistema no está permitid
 Todos los registros periféricos cuyo SPI, USART, USB, incluidos los registros de SPI, USART, USB y otros registros periféricos se pueden acceder bajo niveles no privilegiados. 
 
 > 8. ¿Qué se entiende por modelo de registros ortogonal? Dé un ejemplo
+
 En general, una instrucción codifica una operación básica que el computador realiza sobre unos datos ubicados en la memoria o en los registros de la máquina y a los que accede utilizando un modo de direccionamiento. Diremos que un modelo de registro es ortogonal cuando las instrucciones puedan combinar los
 valores de los tres factores anteriores sin ninguna restricción. Ejemplo: ISA Instruction Set Architecture.
 
 > 9. ¿Qué ventajas presenta el uso de intrucciones de ejecución condicional (IT)? Dé un ejemplo
+Una de las ventajas del uso de instrucciones de ejecución condicional es que se evita la ejecución de una instrucción al darse una determinada condición. Las instrucciones de salto condicional comprueban ciertos indicadores del registro CCR para decidir si se debe saltar o no. 
 
 > 10. Describa brevemente las excepciones más prioritarias (reset, NMI, Hardfault).
+
+Excepción RESET: Detiene la ejecución del procesador. 
+Excepción NMI: Es utilizada por el watchdog y el brown-out detector.
+Excepción HARDFAULT: Se presenta cuando hay un error de respuesta en el acceso a memoria, o error en el bus de comunicación.
  
 > 11. Describa las funciones principales de la pila. ¿Cómo resuelve la arquitectura el llamado a funciones y su retorno?
 
