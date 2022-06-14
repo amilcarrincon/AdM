@@ -76,6 +76,23 @@ Las interrupciones son generadas por los dispositivos periféricos habilitando u
 (CMSIS) es una capa de abstracción de hardware independiente del proveedor de la serie de procesadores Cortex-M. El propósito de CMSIS es permitir que las MCU Cortex M de diferentes fabricantes logren un cierto grado de consistencia al menos en el nivel central, y mejorar la eficiencia de la migración de software.
 
 > 16. Cuando ocurre una interrupción, asumiendo que está habilitada ¿Cómo opera el microprocesador para atender a la subrutina correspondiente? Explique con un ejemplo
-
+Una petición de interrupción o más conocida como IRQ, siglas que significan Interrupt ReQuest, es un mecanismo indispensable en toda CPU para poder interactuar con ella a todos los niveles, tanto por parte de los usuarios como el resto del hardware.Para gestionar una petición de interrupción la CPU ha de parar en seco el ciclo de instrucción, cada vez que una instrucción es completada la propia CPU va a comprobar si existe una petición de interrupción. En el caso de que no exista ejecutará la siguiente línea de código del programa. Si existe lo que hará será almacenar el estado del programa en un registro especial. Siendo el estado el valor de la siguiente instrucción en el contador de programa. Dependiendo del cual sea el tipo de instrucción, la CPU cargará en el contador de programa una dirección de memoria especial que apunta a la ROM de instrucciones, un programa en una memoria aparte del procesador que tiene codificado como la CPU tiene que gestionar dicha instrucción.
 
 > 17. ¿Cómo cambia la operación de stacking al utilizar la unidad de punto flotante?
+ 
+> 18. ¿Qué es el systick? ¿Por qué puede afirmarse que su implementación favorece la portabilidad de los sistemas operativos embebidos?
+
+> 19. ¿Qué funciones cumple la unidad de protección de memoria (MPU)?
+
+> 20. ¿Cuántas regiones pueden configurarse como máximo? ¿Qué ocurre en caso de haber solapamientos de las regiones? ¿Qué ocurre con las zonas de memoria no cubiertas por las regiones definidas?
+
+> 21.  ¿Para qué se suele utilizar la excepción PendSV? ¿Cómo se relaciona su uso con el resto
+
+> 22.  ¿Para qué se suele utilizar la excepción SVC? Expliquelo dentro de un marco de un sistema operativo embebido.
+
+**ISA**
+> 1.  ¿Qué son los sufijos y para qué se los utiliza? Dé un ejemplo
+> 2.  ¿Para qué se utiliza el sufijo ‘s’? Dé un ejemplo
+> 3.  ¿Qué utilidad tiene la implementación de instrucciones de aritmética saturada? Dé un ejemplo con operaciones con datos de 8 bits.
+> 4.  Describa brevemente la interfaz entre assembler y C ¿Cómo se reciben los argumentos 	de las funciones? ¿Cómo se devuelve el resultado? ¿Qué registros deben guardarse en la 	pila antes de ser modificados?
+> 5. ¿Qué es una instrucción SIMD? ¿En qué se aplican y que ventajas reporta su uso? Dé un ejemplo.
