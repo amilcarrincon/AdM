@@ -97,10 +97,16 @@ En la MPU se pueden definir hasta 8 regiones programables. Si se accede a una zo
 
 > 21.  ¿Para qué se suele utilizar la excepción PendSV? ¿Cómo se relaciona su uso con el resto
 
+La excepción PendSV retrasa la solicitud de cambio de contexto hasta que todos los demás controladores de IRQ hayan completado su procesamiento. Para hacer esto, el PendSV se programa como la excepción de prioridad más baja.
+
 > 22.  ¿Para qué se suele utilizar la excepción SVC? Expliquelo dentro de un marco de un sistema operativo embebido.
+
+SVC es un mecanismo de excepción proporcionado por el núcleo del procesador ARM Cortex-M. La ejecución de una instrucción SVC genera una llamada de supervisor, que se utiliza para realizar operaciones privilegiadas desde un kernel de sistema operativo. Esto permite que el código de la aplicación acceda y controle los recursos del procesador.
 
 **ISA**
 > 1.  ¿Qué son los sufijos y para qué se los utiliza? Dé un ejemplo
+
+
 > 2.  ¿Para qué se utiliza el sufijo ‘s’? Dé un ejemplo
 > 3.  ¿Qué utilidad tiene la implementación de instrucciones de aritmética saturada? Dé un ejemplo con operaciones con datos de 8 bits.
 > 4.  Describa brevemente la interfaz entre assembler y C ¿Cómo se reciben los argumentos 	de las funciones? ¿Cómo se devuelve el resultado? ¿Qué registros deben guardarse en la 	pila antes de ser modificados?
