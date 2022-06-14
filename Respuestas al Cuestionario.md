@@ -69,8 +69,13 @@ Son perifericos que impactan directamente en el comportamiento de la arquitectur
 
 > 14. ¿Cómo se implementan las prioridades de las interrupciones? Dé un ejemplo
 
+Las interrupciones son generadas por los dispositivos periféricos habilitando una señal del CPU (llamada IRQ "interrupt request") para solicitar atención del mismo. Por ejemplo. cuando un disco duro completa una lectura solicita atención al igual que cada vez que se presiona una tecla o se mueve el mouse.
+
 > 15. ¿Qué es el CMSIS? ¿Qué función cumple? ¿Quién lo provee? ¿Qué ventajas aporta?
 
+(CMSIS) es una capa de abstracción de hardware independiente del proveedor de la serie de procesadores Cortex-M. El propósito de CMSIS es permitir que las MCU Cortex M de diferentes fabricantes logren un cierto grado de consistencia al menos en el nivel central, y mejorar la eficiencia de la migración de software.
+
 > 16. Cuando ocurre una interrupción, asumiendo que está habilitada ¿Cómo opera el microprocesador para atender a la subrutina correspondiente? Explique con un ejemplo
- 
+
+
 > 17. ¿Cómo cambia la operación de stacking al utilizar la unidad de punto flotante?
