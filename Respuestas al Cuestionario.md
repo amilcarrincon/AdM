@@ -78,15 +78,22 @@ Las interrupciones son generadas por los dispositivos periféricos habilitando u
 
 > 16. Cuando ocurre una interrupción, asumiendo que está habilitada ¿Cómo opera el microprocesador para atender a la subrutina correspondiente? Explique con un ejemplo
 
-Una petición de interrupción o más conocida como IRQ, siglas que significan Interrupt ReQuest, es un mecanismo indispensable en toda CPU para poder interactuar con ella a todos los niveles, tanto por parte de los usuarios como el resto del hardware.Para gestionar una petición de interrupción la CPU ha de parar en seco el ciclo de instrucción, cada vez que una instrucción es completada la propia CPU va a comprobar si existe una petición de interrupción. En el caso de que no exista ejecutará la siguiente línea de código del programa. Si existe lo que hará será almacenar el estado del programa en un registro especial. Siendo el estado el valor de la siguiente instrucción en el contador de programa. Dependiendo del cual sea el tipo de instrucción, la CPU cargará en el contador de programa una dirección de memoria especial que apunta a la ROM de instrucciones, un programa en una memoria aparte del procesador que tiene codificado como la CPU tiene que gestionar dicha instrucción.
+Una petición de interrupción o más conocida como IRQ, siglas que significan Interrupt ReQuest, es un mecanismo indispensable en toda CPU para poder interactuar con ella a todos los niveles, tanto por parte de los usuarios como el resto del hardware. Para gestionar una petición de interrupción la CPU ha de parar en seco el ciclo de instrucción, cada vez que una instrucción es completada la propia CPU va a comprobar si existe una petición de interrupción. En el caso de que no exista ejecutará la siguiente línea de código del programa. Si existe lo que hará será almacenar el estado del programa en un registro especial. Siendo el estado el valor de la siguiente instrucción en el contador de programa. Dependiendo del cual sea el tipo de instrucción, la CPU cargará en el contador de programa una dirección de memoria especial que apunta a la ROM de instrucciones, un programa en una memoria aparte del procesador que tiene codificado como la CPU tiene que gestionar dicha instrucción.
 
 > 17. ¿Cómo cambia la operación de stacking al utilizar la unidad de punto flotante?
- 
+
+Si el procesador no tiene unidad de punto flotante, el stack frame es siempre de 8 palabras. Para cortex M4 con unidad de punto flotante, el frame va de 8 o 26 palabras. 
 > 18. ¿Qué es el systick? ¿Por qué puede afirmarse que su implementación favorece la portabilidad de los sistemas operativos embebidos?
 
+Se trata de un temporizador de 24 bits de cuenta descendente, que produce una interrupción cuando el registro interno llega a cero desde el valor de recarga inicial.
+Es completamente portable, porque pertenece al core de la arquitectura. 
 > 19. ¿Qué funciones cumple la unidad de protección de memoria (MPU)?
 
+Entre las funciones de este dispositivo se encuentran la traducción de las direcciones lógicas (o virtuales) a direcciones físicas (o reales), la protección de la memoria, el control de caché y, en arquitecturas de computadoras más simples (especialmente en sistemas de 8 bits), bank switching.
+
 > 20. ¿Cuántas regiones pueden configurarse como máximo? ¿Qué ocurre en caso de haber solapamientos de las regiones? ¿Qué ocurre con las zonas de memoria no cubiertas por las regiones definidas?
+
+En la MPU se pueden definir hasta 8 regiones programables. Si se accede a una zona de memoria no permitida, entonces ocurre una excepción de falla. Si hay regiones superpuestas, entonces el permiso se basará en la región con el numero mas alto.
 
 > 21.  ¿Para qué se suele utilizar la excepción PendSV? ¿Cómo se relaciona su uso con el resto
 
