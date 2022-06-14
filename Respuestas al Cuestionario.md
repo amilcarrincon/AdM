@@ -58,9 +58,14 @@ Excepción HARDFAULT: Se presenta cuando hay un error de respuesta en el acceso 
  
 > 11. Describa las funciones principales de la pila. ¿Cómo resuelve la arquitectura el llamado a funciones y su retorno?
 
+Se entiende como pila, a un almacenamiento donde los elementos están apilados verticalmente, de manera que solo la cima de la pila es accesible, siendo solo el elemento último en poner en la pila, el único que puede ser sacado. Los demás elementos (aunque visibles) no pueden ser sacados de la pila, mientras encima de ellos haya otros elementos. La principal característica de la pila, es que tiene dos índices (punteros) que sirven para llevar un control de cómo está siendo utilizada esta pila. 
 > 12. Describa la secuencia de reset del microprocesador.
- 
+
+En un microprocesador, la señal de reset se genera manualmente al pulsar un botón(reset manual) o cuando se pone en marcha el sistema(reset por encendido). En un  microprocesador hay otras posibles fuentes de reset como son el reset por fallo de alimentación y el rest por desbordamiento del watch Dog.
+
 > 13. ¿Qué entiende por “core peripherals”? ¿Qué diferencia existe entre estos y el resto de los periféricos?
+
+Son perifericos que impactan directamente en el comportamiento de la arquitectura. Ej: NVIC, SysTick,SCB y MPU. Se diferencian de los demás perifericos en que requeridos y no opcionales.
 
 > 14. ¿Cómo se implementan las prioridades de las interrupciones? Dé un ejemplo
 
