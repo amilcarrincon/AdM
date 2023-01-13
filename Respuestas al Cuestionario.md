@@ -22,6 +22,7 @@ La familia de arquitecturas ARM está comprendida por 3 perfiles:<br>
   Su principal característica consiste en su capacidad de procesamiento de señales digitales. De manera similar a la familia M3 consta de una arquitectura Harvard, provee un set con mayor número de instrucciones y destaca por su bajo consumo energético. Igualmente incluye los mismos componentes que M3.<br>
 
  
+ 
 > 3. ¿Por qué se dice que el set de instrucciones Thumb permite mayor densidad de código? Explique
 
 En el estado ARM, el procesador ejecuta instrucciones ARM alineadas con palabras de 32 bits, y en el estado Thumb, el procesador ejecuta instrucciones THUMB alineadas con media palabra de 16 bits.
